@@ -18,3 +18,8 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
+include:
+  - board: vootington
+  - board: vootington
+    snippet: "zmk-analog-matrix-calibrator"
+    artifact-name: vootington_calibrator

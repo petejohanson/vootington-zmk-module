@@ -1,0 +1,47 @@
+# SPDX-License-Identifier: MIT
+
+CONFIG_ZMK_KEYBOARD_NAME="Vootington"
+
+# Enable MPU
+CONFIG_ARM_MPU=y
+
+# Enable HW stack protection
+#CONFIG_HW_STACK_PROTECTION=y
+
+# Enable GPIO
+CONFIG_GPIO=y
+
+# Enable ADC needed for the matrix
+CONFIG_ADC=y
+
+# Ensure DMA for fast bulk ADC sampling
+CONFIG_ADC_STM32_DMA=y
+
+# Enable USB by default
+CONFIG_ZMK_USB=y
+CONFIG_USB_SELF_POWERED=n
+
+# Settings subsystem
+CONFIG_SETTINGS=y
+CONFIG_FLASH=y
+CONFIG_FLASH_MAP=y
+CONFIG_NVS=y
+CONFIG_SETTINGS_NVS=y
+
+CONFIG_USE_DT_CODE_PARTITION=y
+
+# ZMK Studio Overrides, prevent extra flash settings loading
+CONFIG_ZMK_BEHAVIOR_LOCAL_ID_TYPE_CRC16=y
+
+# RAM Conservation
+#CONFIG_ISR_STACK_SIZE=768
+#CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=768
+#CONFIG_USB_CDC_ACM_RINGBUF_SIZE=768
+
+# Behavior related RAM conservation
+CONFIG_ZMK_BEHAVIOR_STICKY_KEY_MAX_HELD=4
+CONFIG_ZMK_COMBO_MAX_PRESSED_COMBOS=2
+CONFIG_ZMK_BEHAVIORS_QUEUE_SIZE=8
+
+# Tweaks when using shell/calibrator
+CONFIG_SHELL_STACK_SIZE=2048

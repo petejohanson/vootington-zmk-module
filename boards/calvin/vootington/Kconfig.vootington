@@ -1,0 +1,12 @@
+# Copyright (c) 2026 Peter Johanson
+# SPDX-License-Identifier: MIT
+
+config BOARD_VOOTINGTON
+	select SOC_STM32G0B1XX
+	select ZMK_ANALOG_MATRIX_VALUE_INVERSION
+	imply RETAINED_MEM
+	imply RETENTION
+	imply RETENTION_BOOT_MODE
+	imply STM32_BOOTLOADER
+	imply RTC
+	imply BBRAM
