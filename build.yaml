@@ -23,3 +23,16 @@ include:
   - board: vootington
     snippet: "cdc-acm-console;zmk-analog-matrix-calibrator"
     artifact-name: vootington_calibrator
+  - board: vootington
+    snippet: "studio-rpc-usb-uart"
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: vootington_studio
+  - board: vootington//big_bar
+    artifact-name: vootington_big_bar
+  - board: vootington//big_bar
+    snippet: "cdc-acm-console;zmk-analog-matrix-calibrator"
+    artifact-name: vootington_big_bar_calibrator
+  - board: vootington//big_bar
+    snippet: "studio-rpc-usb-uart"
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: vootington_big_bar_studio
