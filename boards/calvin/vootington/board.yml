@@ -3,4 +3,6 @@ board:
   full_name: Vootington
   vendor: calvin
   socs:
-    - name: stm32g0b1xx
+  - name: stm32g0b1xx
+    variants:
+    - name: big_bar

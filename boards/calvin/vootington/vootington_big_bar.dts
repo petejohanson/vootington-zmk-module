@@ -1,0 +1,20 @@
+/*
+ * Copyright (c) 2025 Peter Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "vootington.dts"
+
+&matrix {
+	channel-select-masks = <0>,     <(BIT(4))>, <(BIT(7))>,    <(BIT(7))>,  <(BIT(2))>, <(BIT(0))>,        <(BIT(3) + BIT(5))>;
+};
+
+&split_jetvan_layout {
+	status = "disabled";
+};
+
+&jetvan_layout {
+	status = "okay";
+};
+
