@@ -261,7 +261,6 @@ zephyr_udc0: &usb {
 	status = "okay";
 };
 
-
 &dmamux1 {
 	status = "okay";
 };
@@ -276,10 +275,10 @@ zephyr_udc0: &usb {
 		 <&rcc STM32_SRC_SYSCLK ADC_SEL(0)>;
 	clock-names = "adcx", "adc_ker";
 	st,adc-clock-source = "ASYNC";
-	st,adc-prescaler = <1>;
+	st,adc-prescaler = <2>;
 
-        dmas = <&dmamux1 0 5 (STM32_DMA_PERIPH_RX | STM32_DMA_MEM_16BITS |                                                                                                            
-                STM32_DMA_PERIPH_16BITS)>;                                                                                                                                            
+	dmas = <&dmamux1 0 5 (STM32_DMA_PERIPH_RX | STM32_DMA_MEM_16BITS |
+			      STM32_DMA_PERIPH_16BITS | STM32_DMA_PRIORITY_VERY_HIGH)>;
         dma-names = "dmamux";
 
 	#address-cells = <1>;
